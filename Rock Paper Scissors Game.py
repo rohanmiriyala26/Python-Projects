@@ -1,5 +1,5 @@
 import random
-choices = ["Rock", "Paper", "Scissor"]
+choices = ["Rock", "Paper", "Scissors"]
 player_score = 0
 computer_score = 0
 def get_winner(player, computer):
@@ -7,15 +7,15 @@ def get_winner(player, computer):
         return "Tie"
     elif (player == "Rock" and computer == "Paper") or (player == "Paper" and computer == "Rock"):
         return "Computer"
-    elif (player == "Rock" and computer == "Scissor") or (player == "Scissor" and computer == "Rock"):
+    elif (player == "Rock" and computer == "Scissors") or (player == "Scissors" and computer == "Rock"):
         return "Player"
-    elif (player == "Paper" and computer == "Scissor") or (player == "Scissor" and computer == "Paper"):
+    elif (player == "Paper" and computer == "Scissors") or (player == "Scissors" and computer == "Paper"):
         return "Computer"
 print("Welcome to Rock, Paper, Scissors Game!")
 while True:
-    player_choice = input("Choose Rock, Paper, or Scissor: ").capitalize()
+    player_choice = input("Choose Rock, Paper, or Scissors: ").capitalize()
     if player_choice not in choices:
-        print("Invalid choice. Please pick Rock, Paper, or Scissor.")
+        print("Invalid choice. Please pick Rock, Paper, or Scissors.")
         continue
     computer_choice = random.choice(choices)
     print(f"You chose: {player_choice}")
